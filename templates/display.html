@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .no-results {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comparison Results "{{ search_term }}"</h1>
+    </header>
+    <div class="container">
+        <ul>
+            {% if not flipkart_products and not amazon_products %}
+                <div class="no-results">
+                    <p>No results found. Please check the product searched.</p>
+                </div>
+            {% else %}
+                {% for name, flipkart_info in flipkart_products.items() %}
+                    <li>
+                        <h3>{{ name }}</h3>
+                        <div class="price-info">
+                            <p>Flipkart Price: ₹{{ flipkart_info[0] }}</p>
+                            <a href="{{ flipkart_info[1] }}" target="_blank">View on Flipkart</a>
+                        </div>
+                        <div class="price-info">
+                            <p>Amazon Price: ₹{{ amazon_products.get(name.lower())[0] | default('N/A') }}</p>
+                            <a href="{{ amazon_products.get(name.lower())[1]}}" target="_blank">View on Amazon</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><center> &copy;2024 Product Comparison System. All rights reserved.</p>
+                <p>Contact us: <a href="mailto:eshitajain459@gmail.com" style="color: white;">eshitajain459@gmail.com</a></p></center>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

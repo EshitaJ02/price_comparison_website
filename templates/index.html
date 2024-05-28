@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison Website</title>
+    <!-- Link to the updated CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- <header>
+        <h1>Product Comparison System</h1>
+    </header> -->
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://cdn-icons-png.freepik.com/256/9202/9202804.png?ga=GA1.1.770318559.1714044235&semt=ais_hybrid" alt="Price Comparison System Logo" class="logo-img">
+                <h1>Price Comparison System</h1>
+            </div>
+            <p class="slogan">Save More, Shop Smart</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <form action="/compare" method="GET">
+            <label for="product_name">Product Name:</label>
+            <input type="text" id="product_name" name="product_name" placeholder="Enter product name" required><br><br>
+            
+            <label for="product_storage">Product Storage:</label>
+            <select id="product_storage" name="product_storage" required>
+                <option value="32 GB">32 GB</option>
+                <option value="64 GB">64 GB</option>
+                <option value="128 GB">128 GB</option>
+                <option value="256 GB">256 GB</option>
+                <option value="512 GB">512 GB</option>
+                <option value="1 TB">1 TB</option>
+            </select><br><br>
+            
+            <label for="product_ram">Product RAM:</label>
+            <select id="product_ram" name="product_ram">
+                <option value="" selected>---</option>
+                <option value="4 GB">4 GB</option>
+                <option value="6 GB">6 GB</option>
+                <option value="8 GB">8 GB</option>
+                <option value="12 GB">12 GB</option>
+                <option value="16 GB">16 GB</option>
+            </select><br><br>
+
+            <label for="product_price">Price Range:</label>
+            <select id="product_price" name="product_price" onchange="updatePriceRange()">
+                <option value="0-500000" selected>---</option>
+                <option value="0-10000">Under ₹10,000</option>
+                <option value="10000-20000">₹10,000 - ₹20,000</option>
+                <option value="20000-30000">₹20,000 - ₹30,000</option>
+                <option value="30000-500000">Over ₹30,000</option>
+            </select><br><br>
+        
+            <button type="submit">Search</button>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><center> &copy;2024 Product Comparison System. All rights reserved.</p>
+                <p>Contact us: <a href="mailto:eshitajain459@gmail.com" style="color: white;">eshitajain459@gmail.com</a></p></center>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

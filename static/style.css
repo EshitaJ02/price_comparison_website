@@ -1,0 +1,123 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f98d;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the body a flex container */
+    min-height: 100vh; /* Set minimum height for viewport */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.main-content {
+    flex: 1; /* Allow the main content to grow to fill remaining space */
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Home page styles */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.logo-img {
+    width: 130px; /* Adjust the size of the logo */
+    margin-right: 2px; /* Set margin to 2px to maintain space between logo and title */
+    margin-bottom: -3px; /* Adjusted to remove extra space between logo and title */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Comparison results styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.price-info p {
+    margin: 0;
+}
+
+.price-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.price-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
